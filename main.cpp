@@ -2,7 +2,7 @@
 
 
 template <typename Type>
-
+//TODO:printfを関数内に入れる
 Type Min(Type a, Type b) {
 
 	return printf(, a < b ? a : b);
