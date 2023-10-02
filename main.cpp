@@ -4,7 +4,8 @@
 template <typename Type>
 
 Type Min(Type a, Type b) {
-	return a < b ? a : b;
+
+	return printf(, a < b ? a : b);
 }
 
 //テンプレートの解除
@@ -16,11 +17,11 @@ char Min<char>(char a, char b) {
 
 int main() {
 	//int
-	printf("%d\n",Min<int>(1,4));
+	Min<int>(1,4);
 	//float
-	printf("%f\n", Min<float>(3.21f, 3.1f));
+	Min<float>(3.21f, 3.1f);
 	//double
-	printf("%lf\n", Min<double>(5.4, 5.7));
+	Min<double>(5.4, 5.7);
 	//char
 	Min<char>('a', 'b');
 
