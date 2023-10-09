@@ -3,15 +3,14 @@
 #include <chrono>
 #include <thread>
 #include <iostream>
+#include <functional>
 
 std::random_device seed_Gen;//非決定的な乱数生成器
 std::mt19937 mtrand(seed_Gen());//メルセンヌ・ツイスタの32bit版　引数は初期シード
 
-typedef int (*Pfunc)();//関数ポインタ
-
-int DiceRoll(){
-	return std::uniform_int_distribution<int>(1, 6)(seed_Gen);//1~6の間の値を生成できる
-}
+//int DiceRoll(){
+//	return std::uniform_int_distribution<int>(1, 6)(seed_Gen);//1~6の間の値を生成できる
+//}
 
 void DiceResult(int diceNumber) {
 	//偶数のとき
@@ -23,16 +22,13 @@ void DiceResult(int diceNumber) {
 	}
 }
 
-int SetTimeOut(Pfunc collback,int second) {
+int SetTimeOut(std::function<int()> collback,int second) {
 	std::this_thread::sleep_for(std::chrono::seconds(second));
 	return collback();
-
 }
 
 int main() {
-
-	Pfunc p;
-	p = DiceRoll;
+	std::function<int()> fx = [](){return std::uniform_int_distribution<int>(1, 6)(seed_Gen); };//1~6の間の値を生成できる};
 	int RollResult;
 	int Answer;
 
@@ -43,7 +39,7 @@ int main() {
 		if (Answer == 0) {
 			break;
 		}
-		RollResult = SetTimeOut(p, 3);
+		RollResult = SetTimeOut(fx, 3);
 		printf("Answer : %d\n",RollResult);
 		DiceResult(RollResult);
 		if (RollResult % 2 == 0 && Answer == 2) {
