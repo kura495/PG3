@@ -1,4 +1,7 @@
 ﻿#pragma once
+#include <thread>
+#include <chrono>
+
 enum class EnemyState{
 	Approach,
 	Leave,

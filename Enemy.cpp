@@ -23,16 +23,19 @@ void Enemy::Update()
 void Enemy::Approach()
 {
 	printf("近づいてきた！\n");
+	std::this_thread::sleep_for(std::chrono::seconds(second));
 }
 
 void Enemy::Leave()
 {
 	printf("離れていった・・・\n");
+	std::this_thread::sleep_for(std::chrono::seconds(second));
 }
 
 void Enemy::Shot()
 {
 	printf("射撃してきた！\n");
+	std::this_thread::sleep_for(std::chrono::seconds(second));
 }
 
 void (Enemy::* Enemy::FuncTable[])() = {
