@@ -2,12 +2,8 @@
 class Base
 {
 public:
-	Base();
-	virtual ~Base();
-
-	virtual void Run();
+	virtual void Run() = 0;
 
 private:
 
 };
-
