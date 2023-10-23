@@ -1,25 +1,25 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <random>
 #include <chrono>
 #include <thread>
 #include <iostream>
 
-std::random_device seed_Gen;//”ñŒˆ’è“I‚È—”¶¬Ší
-std::mt19937 mtrand(seed_Gen());//ƒƒ‹ƒZƒ“ƒkEƒcƒCƒXƒ^‚Ì32bit”Å@ˆø”‚Í‰ŠúƒV[ƒh
+std::random_device seed_Gen;//éæ±ºå®šçš„ãªä¹±æ•°ç”Ÿæˆå™¨
+std::mt19937 mtrand(seed_Gen());//ãƒ¡ãƒ«ã‚»ãƒ³ãƒŒãƒ»ãƒ„ã‚¤ã‚¹ã‚¿ã®32bitç‰ˆã€€å¼•æ•°ã¯åˆæœŸã‚·ãƒ¼ãƒ‰
 
-typedef int (*Pfunc)();//ŠÖ”ƒ|ƒCƒ“ƒ^
+typedef int (*Pfunc)();//é–¢æ•°ãƒã‚¤ãƒ³ã‚¿
 
 int DiceRoll(){
-	return std::uniform_int_distribution<int>(1, 6)(seed_Gen);//1~6‚ÌŠÔ‚Ì’l‚ğ¶¬‚Å‚«‚é
+	return std::uniform_int_distribution<int>(1, 6)(seed_Gen);//1~6ã®é–“ã®å€¤ã‚’ç”Ÿæˆã§ãã‚‹
 }
 
 void DiceResult(int diceNumber) {
-	//‹ô”‚Ì‚Æ‚«
+	//å¶æ•°ã®ã¨ã
 	if (diceNumber % 2 == 0) {
-		printf("o‚½‚Ì‚Í’š‚Å‚µ‚½I\n");
+		printf("å‡ºãŸã®ã¯ä¸ã§ã—ãŸï¼\n");
 	}
 	if (diceNumber % 2 == 1) {
-		printf("o‚½‚Ì‚Í”¼‚Å‚µ‚½I\n");
+		printf("å‡ºãŸã®ã¯åŠã§ã—ãŸï¼\n");
 	}
 }
 
@@ -38,7 +38,7 @@ int main() {
 
 	while (true) {
 		
-		printf("1:”¼(Šï”)@2:’š(‹ô”)@0:I—¹\n");
+		printf("1:åŠ(å¥‡æ•°)ã€€2:ä¸(å¶æ•°)ã€€0:çµ‚äº†\n");
 		std::cin >> Answer;
 		if (Answer == 0) {
 			break;
@@ -47,13 +47,13 @@ int main() {
 		printf("Answer : %d\n",RollResult);
 		DiceResult(RollResult);
 		if (RollResult % 2 == 0 && Answer == 2) {
-			printf("‚ ‚È‚½‚ÌŸ‚¿\n");
+			printf("ã‚ãªãŸã®å‹ã¡\n");
 		}
 		else if (RollResult % 2 == 1 && Answer == 1) {
-			printf("‚ ‚È‚½‚ÌŸ‚¿\n");
+			printf("ã‚ãªãŸã®å‹ã¡\n");
 		}
 		else {
-			printf("‚ ‚È‚½‚Ì•‰‚¯\n");
+			printf("ã‚ãªãŸã®è² ã‘\n");
 		}
 
 	}
