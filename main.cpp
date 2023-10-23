@@ -1,4 +1,4 @@
-
+ï»¿
 
 #include <stdio.h>
 
@@ -16,16 +16,16 @@ int RecursiveWageCalc(int time,int HourlyWage = 100) {
 void ComparisonWage(int time) {
 	int Wage = WageCalc(time);
 	int RecursiveWage = RecursiveWageCalc(time);
-	printf("ˆê”Ê“I‚È’À‹à : %d\n", Wage);
-	printf("Ä‹A“I‚È’À‹à : %d\n", RecursiveWage);
+	printf("ä¸€èˆ¬çš„ãªè³ƒé‡‘ : %d\n", Wage);
+	printf("å†å¸°çš„ãªè³ƒé‡‘ : %d\n", RecursiveWage);
 	if (Wage > RecursiveWage) {
-		printf("ˆê”Ê“I‚È’À‹à‘ÌŒn‚Ì•û‚ª‰Ò‚°‚Ü‚·");
+		printf("ä¸€èˆ¬çš„ãªè³ƒé‡‘ä½“ç³»ã®æ–¹ãŒç¨¼ã’ã¾ã™");
 	}
 	else if (Wage < RecursiveWage) {
-		printf("Ä‹A“I‚È’À‹à‘ÌŒn‚Ì•û‚ª‰Ò‚°‚Ü‚·");
+		printf("å†å¸°çš„ãªè³ƒé‡‘ä½“ç³»ã®æ–¹ãŒç¨¼ã’ã¾ã™");
 	}
 	else if (Wage == RecursiveWage) {
-		printf("“¯‚¶‚Å‚·");
+		printf("åŒã˜ã§ã™");
 	}
 }
 
