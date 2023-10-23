@@ -10,7 +10,7 @@ int RecursiveWageCalc(int time,int HourlyWage = 100) {
 	if (time == 1) {
 		return HourlyWage;
 	}
-	return (RecursiveWageCalc(time - 1,HourlyWage*2 - 50));
+	return HourlyWage + (RecursiveWageCalc(time - 1, HourlyWage*2 - 50));
 }
 
 void ComparisonWage(int time) {
@@ -30,7 +30,7 @@ void ComparisonWage(int time) {
 }
 
 int main() {
-	ComparisonWage(9);
+	ComparisonWage(8);
 
 	return 0;
 }
