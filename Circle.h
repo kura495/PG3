@@ -13,7 +13,9 @@ public:
 	void draw()override;
 
 private:
+	//”¼Œa
+	float radius_;
 	//–ÊÏ
-	float area;
+	float area_;
 };
 

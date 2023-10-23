@@ -10,5 +10,5 @@ void Circle::size()
 
 void Circle::draw()
 {
-	printf("–ÊÏ‚Í%f‚Å‚·\n",area);
+	printf("–ÊÏ‚Í%f‚Å‚·\n",area_);
 }
