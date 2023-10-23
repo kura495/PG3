@@ -13,5 +13,6 @@ public:
 	void draw()override;
 
 private:
-
+	//–ÊÏ
+	float area;
 };
