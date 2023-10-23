@@ -5,7 +5,9 @@ class Pair
 public:
 	Pair(Type1 a,Type2 b) : a(a),b(b){}
 
-	Type3 Min();
+	Type3 Min() {
+		return a < b ? static_cast<Type3>(a) : static_cast<Type3>(b)
+	}
 
 
 private:
