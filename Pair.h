@@ -1,14 +1,16 @@
 ﻿#pragma once
-template <typename Type1, typename Type2>
+template <class Type1, class Type2, class Type3 = Type1>
 class Pair
 {
 public:
-	Pair();
-	~Pair();
+	Pair(Type1 a,Type2 b) : a(a),b(b){}
 
+	Type3 Min();
 
 
 private:
-
+	Type1 a;
+	Type2 b;
 };
+
 
