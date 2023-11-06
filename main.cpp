@@ -1,9 +1,13 @@
+#include <stdio.h>
+#include <iostream>
 #include <windows.h>
 
 int main() {
-	//utf-8‚ğBOM–³‚µ(ƒVƒOƒlƒ`ƒƒ–³‚µ)‚Åg‚¦‚é‚æ‚¤‚É‚·‚é
-	SetConsoleOutputCP(65001);
+	//utf-8ã‚’BOMç„¡ã—(ã‚·ã‚°ãƒãƒãƒ£ç„¡ã—)ã§ä½¿ãˆã‚‹ã‚ˆã†ã«ã™ã‚‹
+	//â†“ä½¿ã†ã¨æ–‡å­—åŒ–ã‘ã™ã‚‹ã®ã§è¿½åŠ ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã§å¯¾å¿œ
+	//SetConsoleOutputCP(65001);
 
-
+	char letter[] = "abcã‚ã„ã†123";
+	printf("%s",letter);
 	return 0;
 }
