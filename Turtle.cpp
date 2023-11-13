@@ -4,5 +4,5 @@ Turtle::Turtle(){}
 Turtle::~Turtle(){}
 void Turtle::Run()
 {
-	printf("亀が超遅い！！\n");
+	printf("亀が遅く走る\n");
 }

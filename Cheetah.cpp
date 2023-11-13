@@ -5,5 +5,5 @@ Cheetah::~Cheetah(){}
 
 void Cheetah::Run()
 {
-	printf("チーター超早い！！\n");
+	printf("チーターが早く走る\n");
 }

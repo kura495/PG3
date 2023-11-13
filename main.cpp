@@ -1,14 +1,14 @@
 #include "Cheetah.h"
 #include "Turtle.h"
-#include "Base.h"
+#include "Animals.h"
 
 int main() {
-	Base* Animals[2];
-	Animals[0] = new Cheetah();
-	Animals[1] = new Turtle();
+	Animals* animals[2];
+	animals[0] = new Cheetah();
+	animals[1] = new Turtle();
 
-	Animals[0]->Run();
-	Animals[1]->Run();
+	animals[0]->Run();
+	animals[1]->Run();
 
 	return 0;
 }

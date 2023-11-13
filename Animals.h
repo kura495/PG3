@@ -1,5 +1,5 @@
 ﻿#pragma once
-class Base
+class Animals
 {
 public:
 	virtual void Run() = 0;

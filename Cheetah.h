@@ -1,9 +1,9 @@
 ﻿#pragma once
-#include "Base.h"
+#include "Animals.h"
 
 #include <stdio.h>
 
-class Cheetah : public Base
+class Cheetah : public Animals
 {
 public:
 	Cheetah();
