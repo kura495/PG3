@@ -14,7 +14,7 @@ int main() {
 	Pair<float,float> FloatAndFloat(9.0f,10.0f);
 	std::cout << FloatAndFloat.Min() << std::endl;
 
-	Pair<float, double>FloatAndDouble(10.0,9.0); 
+	Pair<float, double>FloatAndDouble(10.0f,9.0); 
 	std::cout << FloatAndDouble.Min() << std::endl;
 
 	Pair<double, double> DoubleAndDouble(10,9.0);
