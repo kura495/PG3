@@ -28,7 +28,7 @@ int SetTimeOut(std::function<int()> collback,int second) {
 }
 
 int main() {
-	std::function<int()> fx = [](){return std::uniform_int_distribution<int>(1, 6)(seed_Gen); };//1~6の間の値を生成できる};
+	std::function<int()> DiseRoll = [](){return std::uniform_int_distribution<int>(1, 6)(seed_Gen); };//1~6の間の値を生成できる};
 	int RollResult;
 	int Answer;
 
@@ -39,7 +39,7 @@ int main() {
 		if (Answer == 0) {
 			break;
 		}
-		RollResult = SetTimeOut(fx, 3);
+		RollResult = SetTimeOut(DiseRoll, 3);
 		printf("Answer : %d\n",RollResult);
 		DiceResult(RollResult);
 		if (RollResult % 2 == 0 && Answer == 2) {
