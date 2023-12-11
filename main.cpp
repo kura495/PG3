@@ -1,13 +1,40 @@
 #include <stdio.h>
 #include <iostream>
 #include <windows.h>
+#include <list>
 
 int main() {
-	//utf-8をBOM無し(シグネチャ無し)で使えるようにする
-	//↓使うと文字化けするので追加オプションで対応
-	//SetConsoleOutputCP(65001);
+	std::list<const char*> YamanoteLine = {
+	"Tokyo","Kanda","Akihabara","Okachimachi","Ueno","Uguisudani","Nippori","Tabata","Komagome","Sugamo","Otsuka","Ikebukuro","Mejiro","Takadanobaba","Shin-Okubo","Shinjuku","Yoyogi","Harajuku","Shibuya","Ebisu","Meguro","Gotanda","Osaki","Shinagawa","Tamachi","Hamatsucho","Shimbashi","Yurakucho"};
+	printf("1970\n");
+	for (std::list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end();itr++ ) {
+		printf(*itr);
+		printf(",");
+	}
+	printf("\n");
+	printf("2019\n");
+	for (std::list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
+		if (*itr == "Tabata") {
+			itr = YamanoteLine.insert(itr,"Nishi-Nippori");
+			break;
+		}
+	}
+	for (std::list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end();itr++ ) {
+		printf(*itr);
+		printf(",");
+	}
+	printf("\n");
+	printf("2022\n");
+	for (std::list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
+		if (*itr == "Tamachi") {
+			itr = YamanoteLine.insert(itr,"Takanawa-Gateway");
+			break;
+		}
+	}
+	for (std::list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end();itr++ ) {
+		printf(*itr);
+		printf(",");
+	}
 
-	char letter[] = "abcあいう123";
-	printf("%s",letter);
 	return 0;
 }
